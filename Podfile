@@ -5,4 +5,5 @@ platform :ios, '9.0'
 
 target 'e-man-codetest' do
   pod 'GoogleMaps'
+  pod 'UIScrollView-InfiniteScroll'
 end
