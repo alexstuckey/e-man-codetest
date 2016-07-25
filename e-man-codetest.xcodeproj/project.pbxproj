@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A628D1D31D46253000CE89E8 /* FlickrCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A628D1D21D46253000CE89E8 /* FlickrCollectionViewController.swift */; };
+		A628D1D51D462A5100CE89E8 /* FlickrPicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A628D1D41D462A5100CE89E8 /* FlickrPicCollectionViewCell.swift */; };
+		A628D1D71D46335100CE89E8 /* PicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A628D1D61D46335100CE89E8 /* PicDetailViewController.swift */; };
+		A65A0A721D4598E300C424D4 /* map_pins.png in Resources */ = {isa = PBXBuildFile; fileRef = A65A0A711D4598E300C424D4 /* map_pins.png */; };
 		A6D10FDD1D45888200AA54FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D10FDC1D45888200AA54FC /* AppDelegate.swift */; };
 		A6D10FDF1D45888200AA54FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D10FDE1D45888200AA54FC /* ViewController.swift */; };
 		A6D10FE21D45888200AA54FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6D10FE01D45888200AA54FC /* Main.storyboard */; };
 		A6D10FE41D45888200AA54FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6D10FE31D45888200AA54FC /* Assets.xcassets */; };
 		A6D10FE71D45888200AA54FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6D10FE51D45888200AA54FC /* LaunchScreen.storyboard */; };
 		A6D10FF21D45888200AA54FC /* e_man_codetestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D10FF11D45888200AA54FC /* e_man_codetestTests.swift */; };
+		BC7323DE1C89BA327CC71036 /* libPods-e-man-codetest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DE8FACF676221CE406E508 /* libPods-e-man-codetest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +31,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		021D9039A57AD46898D0284C /* Pods-e-man-codetest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-man-codetest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-e-man-codetest/Pods-e-man-codetest.debug.xcconfig"; sourceTree = "<group>"; };
+		73870EA70C0156D1AE59E246 /* Pods-e-man-codetest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-man-codetest.release.xcconfig"; path = "Pods/Target Support Files/Pods-e-man-codetest/Pods-e-man-codetest.release.xcconfig"; sourceTree = "<group>"; };
+		85DE8FACF676221CE406E508 /* libPods-e-man-codetest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-e-man-codetest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A628D1D21D46253000CE89E8 /* FlickrCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrCollectionViewController.swift; sourceTree = "<group>"; };
+		A628D1D41D462A5100CE89E8 /* FlickrPicCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrPicCollectionViewCell.swift; sourceTree = "<group>"; };
+		A628D1D61D46335100CE89E8 /* PicDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicDetailViewController.swift; sourceTree = "<group>"; };
+		A628D1D81D466B1300CE89E8 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		A65A0A711D4598E300C424D4 /* map_pins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pins.png; sourceTree = "<group>"; };
 		A6D10FD91D45888100AA54FC /* e-man-codetest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-man-codetest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6D10FDC1D45888200AA54FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6D10FDE1D45888200AA54FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC7323DE1C89BA327CC71036 /* libPods-e-man-codetest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +70,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		866F41A692D023B941527A48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				021D9039A57AD46898D0284C /* Pods-e-man-codetest.debug.xcconfig */,
+				73870EA70C0156D1AE59E246 /* Pods-e-man-codetest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A6D10FD01D45888100AA54FC = {
 			isa = PBXGroup;
 			children = (
 				A6D10FDB1D45888100AA54FC /* e-man-codetest */,
 				A6D10FF01D45888200AA54FC /* e-man-codetestTests */,
 				A6D10FDA1D45888100AA54FC /* Products */,
+				866F41A692D023B941527A48 /* Pods */,
+				D3226F9278BB57E239A251C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +102,14 @@
 		A6D10FDB1D45888100AA54FC /* e-man-codetest */ = {
 			isa = PBXGroup;
 			children = (
+				A65A0A711D4598E300C424D4 /* map_pins.png */,
 				A6D10FDC1D45888200AA54FC /* AppDelegate.swift */,
 				A6D10FDE1D45888200AA54FC /* ViewController.swift */,
 				A6D10FE01D45888200AA54FC /* Main.storyboard */,
+				A628D1D21D46253000CE89E8 /* FlickrCollectionViewController.swift */,
+				A628D1D81D466B1300CE89E8 /* BridgingHeader.h */,
+				A628D1D41D462A5100CE89E8 /* FlickrPicCollectionViewCell.swift */,
+				A628D1D61D46335100CE89E8 /* PicDetailViewController.swift */,
 				A6D10FE31D45888200AA54FC /* Assets.xcassets */,
 				A6D10FE51D45888200AA54FC /* LaunchScreen.storyboard */,
 				A6D10FE81D45888200AA54FC /* Info.plist */,
@@ -96,6 +126,14 @@
 			path = "e-man-codetestTests";
 			sourceTree = "<group>";
 		};
+		D3226F9278BB57E239A251C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85DE8FACF676221CE406E508 /* libPods-e-man-codetest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +141,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6D10FF61D45888200AA54FC /* Build configuration list for PBXNativeTarget "e-man-codetest" */;
 			buildPhases = (
+				DD9259E9C4967E927B9E5765 /* 📦 Check Pods Manifest.lock */,
 				A6D10FD51D45888100AA54FC /* Sources */,
 				A6D10FD61D45888100AA54FC /* Frameworks */,
 				A6D10FD71D45888100AA54FC /* Resources */,
+				7021C28F189829C443211E54 /* 📦 Embed Pods Frameworks */,
+				78EDFE86A7CB8D9DA78283A5 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,6 +220,7 @@
 			files = (
 				A6D10FE71D45888200AA54FC /* LaunchScreen.storyboard in Resources */,
 				A6D10FE41D45888200AA54FC /* Assets.xcassets in Resources */,
+				A65A0A721D4598E300C424D4 /* map_pins.png in Resources */,
 				A6D10FE21D45888200AA54FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,12 +234,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7021C28F189829C443211E54 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-e-man-codetest/Pods-e-man-codetest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78EDFE86A7CB8D9DA78283A5 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-e-man-codetest/Pods-e-man-codetest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD9259E9C4967E927B9E5765 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A6D10FD51D45888100AA54FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A6D10FDF1D45888200AA54FC /* ViewController.swift in Sources */,
+				A628D1D71D46335100CE89E8 /* PicDetailViewController.swift in Sources */,
+				A628D1D31D46253000CE89E8 /* FlickrCollectionViewController.swift in Sources */,
+				A628D1D51D462A5100CE89E8 /* FlickrPicCollectionViewCell.swift in Sources */,
 				A6D10FDD1D45888200AA54FC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,23 +418,27 @@
 		};
 		A6D10FF71D45888200AA54FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 021D9039A57AD46898D0284C /* Pods-e-man-codetest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "e-man-codetest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "stuckey.e-man-codetest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "e-man-codetest/BridgingHeader.h";
 			};
 			name = Debug;
 		};
 		A6D10FF81D45888200AA54FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73870EA70C0156D1AE59E246 /* Pods-e-man-codetest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "e-man-codetest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "stuckey.e-man-codetest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "e-man-codetest/BridgingHeader.h";
 			};
 			name = Release;
 		};
@@ -388,6 +485,7 @@
 				A6D10FF81D45888200AA54FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6D10FF91D45888200AA54FC /* Build configuration list for PBXNativeTarget "e-man-codetestTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +494,7 @@
 				A6D10FFB1D45888200AA54FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
