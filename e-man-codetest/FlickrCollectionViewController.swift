@@ -14,6 +14,35 @@ class FlickrCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Add infinite scroll handler
+        collectionView?.addInfiniteScrollWithHandler { [weak self] (scrollView) -> Void in
+            let collectionView = scrollView as! UICollectionView
+            
+            // suppose this is an array with new data
+            let newStories = [Story]()
+            
+            var indexPaths = [NSIndexPath]()
+            let index = self?.allStories.count
+            
+            // create index paths for affected items
+            for story in newStories {
+                let indexPath = NSIndexPath(forItem: index++, inSection: 0)
+                
+                indexPaths.append(indexPath)
+                self?.allStories.append(story)
+            }
+            
+            // Update collection view
+            collectionView.performBatchUpdates({ () -> Void in
+                // add new items into collection
+                collectionView.insertItemsAtIndexPaths(indexPaths)
+                }, completion: { (finished) -> Void in
+                    // finish infinite scroll animations
+                    collectionView.finishInfiniteScroll()
+            });
+            
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
