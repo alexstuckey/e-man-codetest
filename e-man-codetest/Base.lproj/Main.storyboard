@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gqI-lh-evM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,7 +8,7 @@
         <!--E-Man-->
         <scene sceneID="z3m-kX-XAl">
             <objects>
-                <collectionViewController id="P2m-fJ-H1B" customClass="FlickrCollectionViewController" customModule="e_man_codetest" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="FlickrView" id="P2m-fJ-H1B" customClass="FlickrCollectionViewController" customModule="e_man_codetest" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6p1-a0-lAl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,6 +34,7 @@
                                 </view>
                                 <connections>
                                     <outlet property="flickrPicUIImageView" destination="CA5-5G-BbL" id="OeO-kI-X9x"/>
+                                    <segue destination="M0Y-AC-0zw" kind="show" identifier="ShowPicDetail" action="showDetailViewController:sender:" id="vEx-7b-cwh"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -46,24 +47,58 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSR-wT-G3D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1885.5" y="-85.5"/>
+            <point key="canvasLocation" x="1826.5" y="-85.5"/>
         </scene>
-        <!--NavViewCont-->
+        <!--Pic Detail View Controller-->
+        <scene sceneID="2eM-As-l1l">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="M0Y-AC-0zw" customClass="PicDetailViewController" customModule="e_man_codetest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4m3-qj-jLD"/>
+                        <viewControllerLayoutGuide type="bottom" id="7HK-xF-my5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="002-Ym-RtC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gJ-fU-Xd5">
+                                <rect key="frame" x="0.0" y="64" width="375" height="545"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaC-JG-yYY">
+                                <rect key="frame" x="150" y="617" width="74" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Return"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="M0Y-AC-0zw" eventType="touchUpInside" id="I6D-Vm-vfB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="5gJ-fU-Xd5" id="r8u-uh-ZfF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GwM-Bk-ERs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2378.5" y="-85.5"/>
+        </scene>
+        <!--Navigation Controller-->
         <scene sceneID="PPo-D3-dpo">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BD0-sz-4O8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController storyboardIdentifier="NavViewCont" title="NavViewCont" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gqI-lh-evM" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavViewCont" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gqI-lh-evM" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VXA-x9-ahX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="P2m-fJ-H1B" kind="relationship" relationship="rootViewController" id="oBf-J5-A63"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uRC-Or-Y7c"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BD0-sz-4O8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="979.5" y="-85.5"/>
+            <point key="canvasLocation" x="693.5" y="-85.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -78,11 +113,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="RfC-DC-fpt"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="P2m-fJ-H1B" kind="show" identifier="ShowFlickrCol" id="DXv-Ny-jwt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="474" y="453"/>
+            <point key="canvasLocation" x="1251.5" y="-85.5"/>
         </scene>
     </scenes>
 </document>
