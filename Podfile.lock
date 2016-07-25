@@ -1,12 +1,15 @@
 PODS:
   - GoogleMaps (1.13.2)
+  - UIScrollView-InfiniteScroll (0.9.1)
 
 DEPENDENCIES:
   - GoogleMaps
+  - UIScrollView-InfiniteScroll
 
 SPEC CHECKSUMS:
   GoogleMaps: b20a103ff307f58392e603cf142e59d7e30374c1
+  UIScrollView-InfiniteScroll: 14e204c50ca4040467e1cbfa141dad7a18919b56
 
-PODFILE CHECKSUM: c5d4442b45f907943c965b85023026e47c59adb2
+PODFILE CHECKSUM: 3ba45a6042a3b50c3cb777b888e714a2c967b93c
 
 COCOAPODS: 1.0.0
