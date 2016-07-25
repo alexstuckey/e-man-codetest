@@ -44,10 +44,8 @@ class ViewController: UIViewController, GMSMapViewDelegate {
     }
     
     func mapView(mapView: GMSMapView!, didTapMarker marker: GMSMarker!) -> Bool {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("NavViewCont") 
         
-        self.presentViewController(vc, animated: true, completion: nil)
+        self.performSegueWithIdentifier("ShowFlickrCol", sender: self)
         return false
     }
     
