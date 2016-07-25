@@ -45,12 +45,12 @@ class ViewController: UIViewController, GMSMapViewDelegate {
     
     func mapView(mapView: GMSMapView!, didTapMarker marker: GMSMarker!) -> Bool {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("NavViewCont") as! UIViewController
+        let vc = storyboard.instantiateViewControllerWithIdentifier("NavViewCont") 
         
         self.presentViewController(vc, animated: true, completion: nil)
         return false
     }
-
+    
 
 }
 
